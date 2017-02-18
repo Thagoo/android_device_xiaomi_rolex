@@ -162,6 +162,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
+    libjni_livedisplay \
     libhwc2on1adapter \
     libgenlock \
     libtinyxml \
