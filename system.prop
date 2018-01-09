@@ -58,6 +58,14 @@ iorapd.readahead.enable=true
 # FM
 ro.fm.transmitter=false
 
+# LMKD
+ro.lmk.low=1001
+ro.lmk.medium=800
+ro.lmk.upgrade_pressure=100
+ro.lmk.downgrade_pressure=100
+ro.lmk.kill_timeout_ms=100
+ro.lmk.log_stats=true
+
 # Media
 media.msm8956hw=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
