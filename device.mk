@@ -248,8 +248,10 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.usb.sh \
     init.qcom.sh \
+    init.baseband.sh \
     init.target.rc \
     fstab.qcom
+
 
 # Keylayout
 PRODUCT_COPY_FILES += \
