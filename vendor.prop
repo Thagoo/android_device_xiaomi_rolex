@@ -35,6 +35,9 @@ vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 vendor.voice.voip.conc.disabled=true
 
+# IO Cgroups
+ro.vendor.iocgrp.config=1
+
 # Bluetooth
 persist.vendor.qcom.bluetooth.enable.splita2dp=false
 vendor.qcom.bluetooth.soc=smd
