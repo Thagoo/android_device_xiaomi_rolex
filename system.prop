@@ -85,6 +85,7 @@ ro.telephony.default_network=20,20
 ro.telephony.use_old_mnc_mcc_format=true
 telephony.lteOnCdmaDevice=1
 vendor.service.qti.ims.enabled=1
+persist.radio.aosp_usr_pref_sel=true
 
 # Time
 persist.timed.enable=true
