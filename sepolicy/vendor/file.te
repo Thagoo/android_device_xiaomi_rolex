@@ -1,3 +1,6 @@
+# Last kmsg
+type proc_last_kmsg, fs_type, proc_type;
+
 # Touchscreen
 type proc_touchpanel, fs_type, sysfs_type, proc_type;
 

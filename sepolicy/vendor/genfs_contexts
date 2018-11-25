@@ -1,3 +1,6 @@
+# Last kmsg
+genfscon proc /last_kmsg u:object_r:proc_last_kmsg:s0
+
 genfscon sysfs /devices/platform/soc/78db000.usb/power_supply   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/7af5000.i2c/i2c-5/5-0055/power_supply   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/7af5000.i2c/i2c-5/5-0057/power_supply u:object_r:sysfs_batteryinfo:s0
