@@ -16,6 +16,9 @@
 
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
+/dev/spidev6.1                                  u:object_r:spidev_device:s0
+/dev/spidev7.1                                  u:object_r:spidev_device:s0
+
 # Input
 /(vendor|system/vendor)/usr/keylayout(/.*)?                   u:object_r:vendor_keylayout_file:s0
 

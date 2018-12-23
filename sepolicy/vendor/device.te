@@ -1,4 +1,4 @@
 type blkio_dev, dev_type;
 type misc_partition, dev_type;
 type lirc_device, dev_type;
-
+type spidev_device, dev_type;

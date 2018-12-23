@@ -8,3 +8,6 @@ get_prop(system_server, userspace_reboot_exported_prop);
 
 # Allow system server to read last_kmsg file
 allow system_server proc_last_kmsg:file r_file_perms;
+
+# Allow system server to read/write spidev file
+allow system_server spidev_device:chr_file rw_file_perms;
