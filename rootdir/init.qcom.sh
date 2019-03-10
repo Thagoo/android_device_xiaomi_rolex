@@ -73,3 +73,7 @@ case "$buildvariant" in
         echo "4 4 1 4" > /proc/sys/kernel/printk
         ;;
 esac
+
+# Set baseband version
+setprop gsm.version.baseband $(strings /vendor/firmware_mnt/image/modem.b12 | grep "^MPSS.JO." | head -1)
+

@@ -1,3 +1,6 @@
+# Block devices
+/dev/block/bootdevice/by-name/modem             u:object_r:modem_block_device:s0
+
 # Camera sockets
 /data/vendor/qcam(/.*)?                         u:object_r:vendor_camera_data_file:s0
 
@@ -23,9 +26,6 @@
 # Lights / IR Blaster
 /sys/devices(/platform)?/soc/[a-z0-9]+\.sdhci/leds(/.*)?                                u:object_r:sysfs_leds:s0
 /sys/devices(/platform)?/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/leds(/.*)?      u:object_r:sysfs_leds:s0
-
-# Shell Script
-/(vendor|system/vendor)/bin/init\.baseband\.sh          u:object_r:init_baseband_exec:s0
 
 # VirtualKeys
 /sys/board_properties/virtualkeys.*         u:object_r:sysfs_virtualkeys:s0
