@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2017, 2019, The Linux Foundation. All rights reserved.
 *
 * Redistribution and use in source and binary forms, with or without
 * modification, are permitted provided that the following conditions are
@@ -602,7 +602,7 @@ private:
 
 
     uint8_t mCurrentSceneMode;
-
+    int8_t m_fwAeMode;
 };
 
 }; // namespace qcamera
