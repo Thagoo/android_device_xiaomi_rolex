@@ -65,6 +65,11 @@ vendor.vidc.disable.split.mode=1
 # NTP Server
 persist.backup.ntpServer=0.pool.ntp.org
 
+# ParanoidDoze
+ro.sensor.proximity=true
+ro.sensor.pocket=xiaomi.sensor.pocket
+ro.sensor.pickup=xiaomi.sensor.pickup
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
