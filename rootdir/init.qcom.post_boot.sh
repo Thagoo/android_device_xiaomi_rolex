@@ -141,6 +141,9 @@ function configure_memory_parameters() {
     # For uLMK + Memcg, this will be set as 6 since adj is zero.
     set_almk_ppr_adj=$(((set_almk_ppr_adj * 6) + 6))
     echo $set_almk_ppr_adj > /sys/module/lowmemorykiller/parameters/adj_max_shift
+    
+    # Modify minfree values for android lmk
+    echo "18432,23040,27648,32256,69010,100640" > /sys/module/lowmemorykiller/parameters/minfree
 
     # Calculate vmpressure_file_min as below & set for 64 bit:
     # vmpressure_file_min = last_lmk_bin + (last_lmk_bin - last_but_one_lmk_bin)
