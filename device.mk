@@ -373,6 +373,12 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libxml2
 
+# QTI common
+TARGET_COMMON_QTI_COMPONENTS := \
+    av \
+    bt \
+    perf
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
