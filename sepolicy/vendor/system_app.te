@@ -1,3 +1,4 @@
+allow system_app sysfs_audio_gain:file rw_file_perms;
 allow system_app { proc_pagetypeinfo sysfs_zram }:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
 allow system_app sysfs_zram:dir r_dir_perms;
