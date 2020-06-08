@@ -1,2 +1,2 @@
 type hal_slmadapter_hwservice, hwservice_manager_type;
-
+type hal_pasrmanager_memory_hwservice, hwservice_manager_type;
