@@ -8,3 +8,6 @@ allow vendor_init {
 
 allow vendor_init ipa_dev:file { create };
 
+# TimeKeep
+allow vendor_init time_data_file:dir { search setattr };
+allow vendor_init time_data_file:file setattr;

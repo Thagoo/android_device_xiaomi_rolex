@@ -11,6 +11,7 @@ init_daemon_domain(timekeep)
 allow timekeep self:capability sys_time;
 
 # Write to /data/vendor/time/ats_2
+typeattribute timekeep data_between_core_and_vendor_violators;
 allow timekeep time_data_file:dir rw_dir_perms;
 allow timekeep time_data_file:file create_file_perms;
 
@@ -20,3 +21,8 @@ set_prop(timekeep, vendor_timekeep_prop)
 # Read /sys/class/rtc/rtc0/since_epoch
 allow timekeep sysfs_rtc:dir search;
 allow timekeep sysfs_rtc:{ file lnk_file } r_file_perms;
+
+allow timekeep sysfs:file { read open };
+allow timekeep vendor_file:dir read;
+allow timekeep vendor_data_file:dir { add_name write };
+allow timekeep vendor_data_file:file { open write create getattr };
