@@ -265,7 +265,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_android \
     libshim_mutexdestroy \
-    libshim_pthreadts
+    libshim_pthreadts \
+    libcamera_shim
 
 # Lights
 PRODUCT_PACKAGES += \
