@@ -82,6 +82,11 @@ function blob_fixup() {
     vendor/lib/libFaceGrade.so|vendor/lib/libarcsoft_beauty_shot.so)
         "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
+
+    vendor/lib/libmmcamera2_stats_modules.so)
+	"${PATCHELF}" --replace-needed "libandroid.so" "libcamera_shim.so" "${2}"
+	;;
+
     esac
 }
 
