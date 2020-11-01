@@ -19,6 +19,7 @@ vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 
 # Charger
 ro.charger.enable_suspend=true
+ro.charger.disable_init_blank=true
 
 # CNE/DPM
 persist.vendor.cne.feature=1
