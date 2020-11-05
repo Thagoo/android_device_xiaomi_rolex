@@ -76,7 +76,7 @@ function blob_fixup() {
 
     vendor/lib/libmmcamera2_stats_modules.so)
         sed -i "s|libgui.so|libwui.so|g" "${2}"
-        patchelf --replace-needed "libandroid.so" "libshim_android.so" "${2}"
+        "${PATCHELF}" --replace-needed "libandroid.so" "libshim_android.so" "${2}"
         ;;
 
     vendor/lib/libmmsw_detail_enhancement.so|vendor/lib/libmmsw_platform.so|vendor/lib64/libmmsw_detail_enhancement.so|vendor/lib64/libmmsw_platform.so)
@@ -84,15 +84,15 @@ function blob_fixup() {
         ;;
 
     vendor/lib/libFaceGrade.so|vendor/lib/libarcsoft_beauty_shot.so)
-        patchelf --remove-needed "libandroid.so" "${2}"
+        "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
 
     vendor/lib64/libwvhidl.so)
-        patchelf --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
+        "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-v29.so" "${2}"
         ;;
 
     vendor/lib64/libsettings.so)
-        patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
+        "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v29.so" "${2}"
         ;;
 
     esac
