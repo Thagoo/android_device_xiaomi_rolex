@@ -93,3 +93,6 @@ persist.radio.aosp_usr_pref_sel=true
 
 # Time
 persist.timed.enable=true
+
+# Zygote preforking
+persist.device_config.runtime_native.usap_pool_enabled=true
