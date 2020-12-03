@@ -482,5 +482,9 @@ PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 # for gms modules.
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 
+# Do not spin up a separate process for the network stack, use an in-process APK.
+PRODUCT_PACKAGES += InProcessNetworkStack
+PRODUCT_PACKAGES += com.android.tethering.inprocess
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/rolex/rolex-vendor.mk)
