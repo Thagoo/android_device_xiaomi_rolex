@@ -120,6 +120,8 @@ BOARD_HAVE_BLUETOOTH_QCOM                   := true
 BLUETOOTH_HCI_USE_MCT                       := true
 QCOM_BT_USE_SMD_TTY                         := true
 QCOM_BT_USE_BTNV := true
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA   := true
