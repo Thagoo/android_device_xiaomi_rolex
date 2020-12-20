@@ -49,6 +49,10 @@ vendor/lib64/soundfx/libqcbassboost.so|d193d746eb37506ce53dc0c0c83ae6f0361b1ae3
 vendor/lib64/soundfx/libqcreverb.so|d3c300f753d5ccc0e63e4b1c7c6763a80a2c35dd
 vendor/lib64/soundfx/libqcvirt.so|57a81c9063b492d85ac72b72b179cd237d47e236
 
+# libaudioparsers from daisy-user-10-QKQ1.191002.002-V11.0.5.0.QDLMIXM-release-keys
+-vendor/lib/libaudioparsers.so
+-vendor/lib64/libaudioparsers.so
+
 # Bluetooth - from LA.UM.9.6.2.r1-03300-89xx.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|2401640a10df4de23f704b87c4adab2da9ed111d
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
