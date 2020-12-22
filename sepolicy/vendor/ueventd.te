@@ -1,1 +1,4 @@
+typeattribute ueventd data_between_core_and_vendor_violators;
+
+allow ueventd self:capability kill;
 allow ueventd self:capability sys_nice;

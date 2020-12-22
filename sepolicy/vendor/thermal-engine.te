@@ -3,5 +3,6 @@ allow thermal-engine thermal_socket:sock_file { relabelfrom relabelto };
 allow thermal-engine sysfs:dir { read open };
 allow thermal-engine file_contexts_file:file { getattr read open };
 allow thermal-engine self:process { setfscreate };
+allow thermal-engine sysfs_devfreq:dir search;
 allow thermal-engine sysfs_batteryinfo:dir search;
 allow thermal-engine sysfs_batteryinfo:file rw_file_perms;
