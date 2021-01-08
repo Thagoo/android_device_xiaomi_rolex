@@ -47,6 +47,9 @@ vendor.display.enable_default_color_mode=1
 vendor.gralloc.enable_fb_ubwc=1
 debug.sf.disable_backpressure=1
 
+# Enable iorapd perfetto tracing for app starts
+iorapd.perfetto.enable=true
+
 # FM
 ro.fm.transmitter=false
 
