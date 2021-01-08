@@ -50,6 +50,9 @@ debug.sf.disable_backpressure=1
 # Enable iorapd perfetto tracing for app starts
 iorapd.perfetto.enable=true
 
+# Enable iorapd readahead for app starts
+iorapd.readahead.enable=true
+
 # FM
 ro.fm.transmitter=false
 
