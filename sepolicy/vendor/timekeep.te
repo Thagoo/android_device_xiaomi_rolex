@@ -28,3 +28,4 @@ allow timekeep sysfs:file { read open };
 allow timekeep vendor_file:dir read;
 allow timekeep vendor_data_file:dir { add_name write };
 allow timekeep vendor_data_file:file { open write create getattr };
+allow timekeep vendor_time_data_file:dir { search };
