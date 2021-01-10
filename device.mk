@@ -165,6 +165,8 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
     libjni_livedisplay \
     libhwc2on1adapter \
     libgenlock \
@@ -428,7 +430,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-service-lazy \
     libcld80211 \
     hostapd \
     libqsap_sdk \
