@@ -1,6 +1,5 @@
 # HIDL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service\.custom                         u:object_r:hal_power_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.rolex                           u:object_r:hal_light_default_exec:s0
 
 # Legacy root dirs
 /firmware(/.*)?                             u:object_r:firmware_file:s0

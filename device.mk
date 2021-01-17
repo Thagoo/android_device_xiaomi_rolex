@@ -274,7 +274,9 @@ TARGET_LD_SHIM_LIBS += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.rolex
+    android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
+    lights.msm8937
 
 # IRQ
 PRODUCT_COPY_FILES += \
