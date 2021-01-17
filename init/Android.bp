@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_land",
+    name: "libinit_rolex",
     recovery_available: true,
-    srcs: ["init_land.cpp"],
+    srcs: ["init_rolex.cpp"],
     include_dirs: [
         "system/core/base/include",
         "system/core/init",

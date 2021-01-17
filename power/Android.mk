@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(TARGET_DEVICE),land)
+ifeq ($(TARGET_DEVICE),rolex)
 
 LOCAL_PATH := $(call my-dir)
 

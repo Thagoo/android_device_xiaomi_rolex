@@ -1,42 +1,26 @@
-# Device Tree Repository for Xiaomi Redmi 3S (Land)
+Device configuration for Xiaomi Redmi 4A ("rolex")
+==================================================
 
-## Spec Sheet
+The Xiaomi Redmi 4A (codenamed _"rolex"_) is a mid-range smartphone from Xiaomi.
+It was announced on November 2016.
 
-| Feature                 | Specification                     |
-| :---------------------- | :-------------------------------- |
-| CPU                     | Octa-core 1.4 GHz Cortex-A53      |
-| Chipset                 | Qualcomm MSM8937 Snapdragon 430   |
-| GPU                     | Adreno 505                        |
-| Memory                  | 2/3 GB                            |
-| Shipped Android Version | 6.0.1                             |
-| Storage                 | 16/32 GB                          |
-| MicroSD                 | Up to 256 GB                      |
-| Battery                 | 4100 mAh (non-removable)          |
-| Dimensions              | 139.3 x 69.6 x 8.5 mm             |
-| Display                 | 720 x 1280 pixels, 5.0" IPS LCD   |
-| Rear Camera             | 13 MP, LED flash                  |
-| Front Camera            | 5 MP                              |
-| Release Date            | June 2016                         |
+## Device specifications
 
-## Device Picture
+Basic   | Spec Sheet
+-------:|:-------------------------
+SoC     | Qualcomm MSM8917 Snapdragon 425
+CPU     | Quad-core 1.4 GHz ARM® Cortex™ A53
+GPU     | Adreno 308
+Memory  | 2/3 GB RAM 
+Shipped Android Version | 6.0.1
+Storage | 16/32 GB
+MicroSD | Up to 256 GB
+Battery | Non-removable Li-Ion 3120 mAh battery
+Dimensions | 139.9 x 70.4 x 8.5 mm
+Display | 720 x 1280 pixels, 5.0 inches (~296 ppi pixel density)
+Rear Camera | 13 MP, f/2.2, autofocus, LED flash
+Front Camera | 5 MP, f/2.2
 
-![Redmi 3S](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-3-pro-2.jpg "Redmi 3S")
+## Device picture
 
-## Copyright
-
-```
-#
-# Copyright (C) 2017-2018 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+![Redmi 4A](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-4a-3.jpg "Redmi 4A in white")

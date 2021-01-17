@@ -22,7 +22,7 @@ set -e
 export INITIAL_COPYRIGHT_YEAR=2016
 
 # Required!
-DEVICE=land
+DEVICE=rolex
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

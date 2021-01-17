@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=land
+DEVICE=rolex
 VENDOR=xiaomi
 
 # Load extractutils and do some sanity checks
@@ -70,19 +70,6 @@ function blob_fixup() {
         sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
         ;;
 
-    vendor/bin/gx_fpcmd|vendor/bin/gx_fpd)
-        patchelf --remove-needed "libbacktrace.so" "${2}"
-        patchelf --remove-needed "libunwind.so" "${2}"
-        ;;
-    
-    vendor/bin/gx_fpd)
-        patchelf --add-needed "liblog.so" "${2}"
-        ;;
-
-    vendor/lib64/hw/fingerprint.goodix.so)
-        patchelf --remove-needed "libandroid_runtime.so" "${2}"
-        ;;
-
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${2}"
         ;;
@@ -98,10 +85,6 @@ function blob_fixup() {
 
     vendor/lib/libFaceGrade.so|vendor/lib/libarcsoft_beauty_shot.so)
         patchelf --remove-needed "libandroid.so" "${2}"
-        ;;
-
-    vendor/lib64/libfpservice.so)
-        patchelf --add-needed "libshim_binder.so" "${2}"
         ;;
 
     vendor/lib64/libwvhidl.so)

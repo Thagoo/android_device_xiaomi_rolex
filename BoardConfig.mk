@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/land
+DEVICE_PATH := device/xiaomi/rolex
 
 # Architecture
 TARGET_ARCH 	    	:= arm64
@@ -35,7 +35,7 @@ TARGET_2ND_CPU_VARIANT 	:= generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 TARGET_BOARD_PLATFORM 	  := msm8937
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno308
 BUILD_BROKEN_DUP_RULES := true
 
 # Binder
@@ -48,12 +48,12 @@ TARGET_NO_BOOTLOADER 		:= true
 
 # kernel
 BOARD_KERNEL_BASE		:= 0x80000000
-BOARD_KERNEL_CMDLINE 		:= androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.usbconfigfs=false loop.max_part=7
+BOARD_KERNEL_CMDLINE 		:= console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000 androidboot.usbconfigfs=false loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME 	:= Image.gz-dtb
 BOARD_KERNEL_PAGESIZE 		:=  2048
 BOARD_MKBOOTIMG_ARGS 		:= --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG 		:= land_defconfig
-TARGET_KERNEL_SOURCE 		:= kernel/xiaomi/msm8937
+TARGET_KERNEL_CONFIG 		:= rova_defconfig
+TARGET_KERNEL_SOURCE 		:= kernel/xiaomi/msm8917
 TARGET_KERNEL_VERSION         := 4.9
 TARGET_KERNEL_CLANG_COMPILE     := true
 TARGET_EXFAT_DRIVER		:= sdfat
@@ -163,7 +163,7 @@ TARGET_CONTINUOUS_SPLASH_ENABLED := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/android_touch/doubletap2wake"
+TARGET_TAP_TO_WAKE_NODE := "proc/gesture/onoff"
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
@@ -186,9 +186,9 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB         := libinit_land
+TARGET_INIT_VENDOR_LIB         := libinit_rolex
 TARGET_PLATFORM_DEVICE_BASE    := /devices/soc/
-TARGET_RECOVERY_DEVICE_MODULES := libinit_land
+TARGET_RECOVERY_DEVICE_MODULES := libinit_rolex
 
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
@@ -264,4 +264,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
--include vendor/xiaomi/land/BoardConfigVendor.mk
+-include vendor/xiaomi/rolex/BoardConfigVendor.mk

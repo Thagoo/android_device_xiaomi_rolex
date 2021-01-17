@@ -42,7 +42,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
@@ -128,8 +127,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
     camera.msm8937 \
-    libmm-qcamera \
-    GCam
+    libmm-qcamera
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4 \
@@ -186,10 +184,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey \
     libprotobuf-cpp-lite
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.land
 
 # FM
 PRODUCT_PACKAGES += \
@@ -270,13 +264,12 @@ PRODUCT_PACKAGES += \
 # Libshims
 PRODUCT_PACKAGES += \
     libshim_android \
-    libshim_binder \
     libshim_mutexdestroy \
     libshim_pthreadts
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.land
+    android.hardware.light@2.0-service.rolex
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -455,7 +448,5 @@ PRODUCT_PACKAGES += \
  PRODUCT_BOOT_JARS += \
     WfdCommon
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
 # Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/land/land-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/rolex/rolex-vendor.mk)
