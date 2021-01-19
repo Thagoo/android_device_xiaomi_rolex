@@ -27,96 +27,58 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-function 8937_sched_dcvs_eas() {
-    # enable governor for perf cluster
+function 8917_sched_dcvs_eas()
+{
+    #governor settings
     echo 1 > /sys/devices/system/cpu/cpu0/online
     echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us
     #set the hispeed_freq
-    echo 1094400 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-    #default value for hispeed_load is 90, for 8937 it should be 85
-    echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
-    ## enable governor for power cluster
-    echo 1 > /sys/devices/system/cpu/cpu4/online
-    echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
-    #set the hispeed_freq
-    echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
-    #default value for hispeed_load is 90, for 8937 it should be 85
-    echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
-
+    echo 1094400 > /sys/devices/system/cpu/cpufreq/schedutil/hispeed_freq
+    #default value for hispeed_load is 90, for 8917 it should be 85
+    echo 85 > /sys/devices/system/cpu/cpufreq/schedutil/hispeed_load
 }
 
-function 8937_sched_dcvs_hmp() {
+function 8917_sched_dcvs_hmp()
+{
     # HMP scheduler settings
     echo 3 > /proc/sys/kernel/sched_window_stats_policy
     echo 3 > /proc/sys/kernel/sched_ravg_hist_size
+    echo 1 > /proc/sys/kernel/sched_restrict_tasks_spread
     # HMP Task packing settings
-    echo 50 > /proc/sys/kernel/sched_small_task
+    echo 20 > /proc/sys/kernel/sched_small_task
     echo 30 > /sys/devices/system/cpu/cpu0/sched_mostly_idle_load
     echo 30 > /sys/devices/system/cpu/cpu1/sched_mostly_idle_load
     echo 30 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_load
     echo 30 > /sys/devices/system/cpu/cpu3/sched_mostly_idle_load
-    echo 30 > /sys/devices/system/cpu/cpu4/sched_mostly_idle_load
-    echo 30 > /sys/devices/system/cpu/cpu5/sched_mostly_idle_load
-    echo 30 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_load
-    echo 30 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_load
 
     echo 3 > /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run
     echo 3 > /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run
     echo 3 > /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run
     echo 3 > /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run
-    echo 3 > /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run
-    echo 3 > /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run
-    echo 3 > /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run
-    echo 3 > /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run
 
     echo 0 > /sys/devices/system/cpu/cpu0/sched_prefer_idle
     echo 0 > /sys/devices/system/cpu/cpu1/sched_prefer_idle
     echo 0 > /sys/devices/system/cpu/cpu2/sched_prefer_idle
     echo 0 > /sys/devices/system/cpu/cpu3/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu4/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu5/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu6/sched_prefer_idle
-    echo 0 > /sys/devices/system/cpu/cpu7/sched_prefer_idle
-    # enable governor for perf cluster
+
     echo 1 > /sys/devices/system/cpu/cpu0/online
     echo "interactive" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo "19000 1248000:39000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
-    echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-    echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-    echo 1248000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
-    echo "1 960000:80 1248000:85 1401000:90" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
-    echo 39000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-    echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/sampling_down_factor
-
-    # enable governor for power cluster
-    echo 1 > /sys/devices/system/cpu/cpu4/online
-    echo "interactive" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-    echo "19000 1094400:39000" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-    echo 65 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-    echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-    echo 1094400 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-    echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
-    echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-    echo "1 768000:60 1094400:65 1094400:80" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
-    echo 39000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-    echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor
+    echo "19000 1094400:39000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+    echo 85 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+    echo 20000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
+    echo 1094400 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
+    echo 0 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
+    echo "1 960000:85 1094400:90" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+    echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+    echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
 
     # Enable sched guided freq control
-    echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load
-    echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif
-    echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows
-    echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/enable_prediction
-    echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load
-    echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif
-    echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/align_windows
-    echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/enable_prediction
-    echo 200000 > /proc/sys/kernel/sched_freq_inc_notify
-    echo 200000 > /proc/sys/kernel/sched_freq_dec_notify
-
+    echo 1 > /sys/devices/system/cpu/cpufreq/interactive/use_sched_load
+    echo 1 > /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif
+    echo 50000 > /proc/sys/kernel/sched_freq_inc_notify
+    echo 50000 > /proc/sys/kernel/sched_freq_dec_notify
 }
 
 function configure_read_ahead_kb_values() {
@@ -221,13 +183,13 @@ function configure_memory_parameters() {
 
 }
 
-# Apply Scheduler and Governor settings for 8937
+# Apply Scheduler and Governor settings for 8917
 # HMP scheduler settings
 echo 3 > /proc/sys/kernel/sched_window_stats_policy
 echo 3 > /proc/sys/kernel/sched_ravg_hist_size
 echo 20000000 > /proc/sys/kernel/sched_ravg_window
 
-#disable sched_boost in 8937
+#disable sched_boost in 8917
 echo 0 > /proc/sys/kernel/sched_boost
 
 for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor; do
@@ -256,13 +218,12 @@ KernelVersionS=${KernelVersionStr:2:2}
 KernelVersionA=${KernelVersionStr:0:1}
 KernelVersionB=${KernelVersionS%.*}
 if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 9 ]; then
-    8937_sched_dcvs_eas
+    8917_sched_dcvs_eas
 else
-    8937_sched_dcvs_hmp
+    8917_sched_dcvs_hmp
 fi
 
 echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
 # Disable L2-GDHS low power modes
 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
@@ -274,10 +235,6 @@ echo N > /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled
 echo 1 > /sys/devices/system/cpu/cpu1/online
 echo 1 > /sys/devices/system/cpu/cpu2/online
 echo 1 > /sys/devices/system/cpu/cpu3/online
-echo 1 > /sys/devices/system/cpu/cpu4/online
-echo 1 > /sys/devices/system/cpu/cpu5/online
-echo 1 > /sys/devices/system/cpu/cpu6/online
-echo 1 > /sys/devices/system/cpu/cpu7/online
 
 # Enable low power modes
 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled

@@ -9,8 +9,8 @@ on enable-low-power
     swapon_all /vendor/etc/fstab.qcom
 
     # Set GPU idle freq & default gov
-    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 4
-    write /sys/class/kgsl/kgsl-3d0/devfreq/governor simple_ondemand
+    write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 3
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
     # Enable core control
     write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 2
@@ -21,24 +21,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
     write /sys/devices/system/cpu/cpu0/core_ctl/task_thres 20
 
-    write /sys/devices/system/cpu/cpu4/core_ctl/min_cpus 2
-    write /sys/devices/system/cpu/cpu4/core_ctl/max_cpus 4
-    write /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres 85
-    write /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres 50
-    write /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms 1000
-    write /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster 0
-    write /sys/devices/system/cpu/cpu4/core_ctl/task_thres 10
-
 on charger
-    # Offline all cores other than CPU0
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/devices/system/cpu/cpu4/online 0
-    write /sys/devices/system/cpu/cpu5/online 0
-    write /sys/devices/system/cpu/cpu6/online 0
-    write /sys/devices/system/cpu/cpu7/online 0
-
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
 
