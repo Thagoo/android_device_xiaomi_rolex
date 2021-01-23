@@ -66,10 +66,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    product/lib64/libdpmframework.so)
-        sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
-        ;;
-
     vendor/lib/libmmcamera2_sensor_modules.so)
         sed -i "s|/system/etc/camera|/vendor/etc/camera|g" "${2}"
         ;;
