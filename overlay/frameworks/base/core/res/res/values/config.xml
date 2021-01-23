@@ -508,9 +508,6 @@
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
 
-    <!-- Whether notify fingerprint client of successful cancelled authentication -->
-<!--    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool> -->
-
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-framework.oat"</item>
@@ -592,9 +589,6 @@
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">true</bool>
 
-    <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
-    <bool name="config_cleanupUnusedFingerprints">false</bool>
-    
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
@@ -615,11 +609,4 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
-         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
-         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
-         and Strength as defined in Authenticators.java -->
-    <string-array name="config_biometric_sensors" translatable="false" >
-        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
-    </string-array>
 </resources>
