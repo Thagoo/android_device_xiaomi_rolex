@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_rolex.mk
+    $(LOCAL_DIR)/lineage_rolex.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_rolex-user \
-    aosp_rolex-userdebug \
-    aosp_rolex-eng
+    lineage_rolex-user \
+    lineage_rolex-userdebug \
+    lineage_rolex-eng
