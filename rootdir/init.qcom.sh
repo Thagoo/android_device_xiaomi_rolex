@@ -27,9 +27,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Start msm_irqbalance for 8937
-start vendor.msm_irqbalance
-
 # Remove recovery cache from persist
 rm -rf /mnt/vendor/persist/cache/recovery
 
