@@ -37,5 +37,5 @@
     <bool translatable="false" name="config_wifi_ap_mac_randomization_supported">false</bool>
 
     <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Redmi 3s</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Redmi</string>
 </resources>
