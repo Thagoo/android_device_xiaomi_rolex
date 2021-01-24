@@ -200,6 +200,14 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|6a777556a80797c6c83
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/lib64/libwvhidl.so|07a8861d3aa01ba535b7a1af808e012ba1dbe229
 
+# DSP - from LA.UM.9.6.2.r1-03300-89xx.0
+system_ext/lib/vendor.qti.hardware.dsp@1.0.so|118bdc98a5a564a749245f2f1b11cd53a9cd4c68
+system_ext/lib64/vendor.qti.hardware.dsp@1.0.so|5f3519b56355765d0a80195d638d5ca460f0ae36
+vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
+vendor/lib/vendor.qti.hardware.dsp@1.0.so|3326828ea7f6f8139429d2cd0379e80f5ca5178d
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|95b26a4a29f1443ec389be6ca80151a0aec96b36
+
 # FM - from LA.UM.9.6.2.r1-03300-89xx.0
 -system_ext/lib/vendor.qti.hardware.fm@1.0.so|847a077921ba3c64aeb5dd47ccad1697a1ad2fbb
 -system_ext/lib64/vendor.qti.hardware.fm@1.0.so|b6bdde84366a79b7d49f98a2eef932dff4f87981
