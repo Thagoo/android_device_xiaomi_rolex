@@ -271,12 +271,7 @@ PRODUCT_PACKAGES += \
     libshim_android \
     libshim_mutexdestroy \
     libshim_pthreadts \
-    libcamera_shim \
-    libshim_libmmcamera
-
-# Camera Shim
-TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libmmcamera_ppeiscore.so|libshim_libmmcamera.so
+    libcamera_shim
 
 # Lights
 PRODUCT_PACKAGES += \
