@@ -59,7 +59,7 @@ TARGET_KERNEL_CLANG_COMPILE     := true
 TARGET_EXFAT_DRIVER		:= sdfat
 
 # ANT+
-BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Audio
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
