@@ -23,4 +23,4 @@ Front Camera | 5 MP, f/2.2
 
 ## Device picture
 
-![Redmi 4A](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-4a-3.jpg "Redmi 4A in white")
+![Redmi 4A](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-4a-2.jpg "Redmi 4A in white")
