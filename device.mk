@@ -143,6 +143,8 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
+    android.hardware.camera.device@3.2 \
+    android.hardware.camera.device@3.3 \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.5 \
     vendor.qti.hardware.camera.device@1.0
@@ -373,8 +375,10 @@ PRODUCT_PACKAGES += \
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-
+    $(LOCAL_PATH)/seccomp/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
+    $(LOCAL_PATH)/seccomp/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
+    $(LOCAL_PATH)/seccomp/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy
+   
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl:64 \
