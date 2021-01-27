@@ -2,7 +2,7 @@
 /data/vendor/qcam(/.*)?                         u:object_r:vendor_camera_data_file:s0
 
 # Chargeonlymode
-/vendor/bin/chargeonlymode                      u:object_r:charger_exec:s0
+# /vendor/bin/chargeonlymode                      u:object_r:charger_exec:s0
 
 # HIDL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service\.custom                         u:object_r:hal_power_default_exec:s0
