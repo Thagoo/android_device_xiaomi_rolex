@@ -276,52 +276,52 @@ vendor/lib64/vendor.qti.gnss@3.0.so|f13c5fffe0fbe5bfc1384d7449f5820f75104c33
 vendor/lib64/vendor.qti.gnss@4.0-service.so|3c75d133af5193436167380aa89abcf05d079968
 vendor/lib64/vendor.qti.gnss@4.0.so|cc2504016d0ce0afbc58ac95207a4b913f2ccfe9
 
-# Graphics - from LA.UM.9.6.2.r1-03300-89xx.0
+# Graphics - from LA.UM.9.6.2.r1-03600-89xx.0
 lib/libsdm-disp-apis.so|39d52eb5e311950a6b8eca35ac53758e7297e9cf
 lib64/libsdm-disp-apis.so|752de98fed59c7d161a113b62d46e20a2c939789
 vendor/lib/egl/eglSubDriverAndroid.so|ef519ee12656b4d9fcf3de343d161dd2761bf1f3
 vendor/lib/egl/libEGL_adreno.so|7b1ae9e2c4f44c4449db61b31e1860a8a584bbaf
 vendor/lib/egl/libGLESv1_CM_adreno.so|6c63055e6ac76dc5c7cd7842e697a66a71571f4b
-vendor/lib/egl/libGLESv2_adreno.so|c60f70b47082247e5f96cafcda899f04f327d6a6
+vendor/lib/egl/libGLESv2_adreno.so|3d56537baa769ba4b79c6e600c60056dda93caf6
 vendor/lib/egl/libq3dtools_adreno.so|e211af37469cafbb1fd814c6ba90ba9629097379
-vendor/lib/egl/libq3dtools_esx.so|c46e6929e833d8b35352cb56fc6ddf41af4b33b5
+vendor/lib/egl/libq3dtools_esx.so|5d6ea56d63c7d5a79ab7d9eb52a3d655c342d4c9
 vendor/lib/libC2D2.so|64e2a5a20312e5cb59c23b3a3a99bf8912946ed3
-vendor/lib/libCB.so|13b0437e0a2cc21e13a0eccbb38763bdb3d98f98
+vendor/lib/libCB.so|34dabd9533f29c6e1449d5f35f288cdf5245efc4
 vendor/lib/libOpenCL.so|4e47c45e327d04fa2fd4f49d3e3018f69eaed646
-vendor/lib/libadreno_utils.so|ef527eefca54c6be7051cdf35bed4cf2438e8205
-vendor/lib/libc2d30-a3xx.so|b1a2f484b931b1ffb6fe460100632cc3675e869d
+vendor/lib/libadreno_utils.so|14d2e080f9e5fc0b7fe0a8f33f71ff2721ef5cd3
+vendor/lib/libc2d30-a3xx.so|e06a856c344a00e3e38bd8b2127d98e53747b242
 vendor/lib/libc2d30_bltlib.so|f3667f469dab7b3d5023785c6139819b557b3ed0
-vendor/lib/libgpudataproducer.so|51082e480194e40a718eea792c09cf8ca0cbd527
-vendor/lib/libgsl.so|7325462d2b31666d55ccd305e62e0b81f39d1568
+vendor/lib/libgpudataproducer.so|aec072f0d170c4c0a9192a7072e5489d3b5224b9
+vendor/lib/libgsl.so|67a5561acff2217fb47f9dc9ff8c459794a5afe6
 vendor/lib/libhdr_tm.so|3d899ac8b0e6370295ab56ad95076e3c00140f75
-vendor/lib/libllvm-glnext.so|9f568ed634a85789b43d8f58bfd1bec3532792de
+vendor/lib/libllvm-glnext.so|c03d6ec1247014060e3ac8e931277faef35a85c2
 vendor/lib/libllvm-qcom.so|e8713eb198a4863f61dc7cb24f7ba0ce9b1504e1
 vendor/lib/libmm-hdcpmgr.so|ea47b3c85cfd894945cd7a4412cdc3972ea67c78
 vendor/lib/libpvr.so|5e7b1788636d49b2ea3d02a1138c72cbc3b4c7ca
 vendor/lib/librs_adreno.so|97756870564754d9cd6e6301a4f1a15f7a5a5711
-vendor/lib/libVkLayer_q3dtools.so|d5e38dc9f9c1f614afb3c1d19b5729752d8f0404
+vendor/lib/libVkLayer_q3dtools.so|daf2031ac5c3cefabb83b02a3a91081b773aeea8
 vendor/lib64/egl/eglSubDriverAndroid.so|cd1cb25bfd16f15e0d7c6495493359838a1b6e96
 vendor/lib64/egl/libEGL_adreno.so|eb26e59665ec42a6889eea2ccf596b8f4e85c219
 vendor/lib64/egl/libGLESv1_CM_adreno.so|ebafbd6ce0caf448a5bcfd604cdfe115e3af520a
-vendor/lib64/egl/libGLESv2_adreno.so|082ee6736a6f09340771f18dae07f022c8f1ee85
+vendor/lib64/egl/libGLESv2_adreno.so|98fc2d52aa325237bf36484db8b76a2d3e531d5d
 vendor/lib64/egl/libq3dtools_adreno.so|d8c8f25332d218a2dbd7cc5052e384b59d07c5a1
-vendor/lib64/egl/libq3dtools_esx.so|fd8a8a9afa1a8a4c4776eb14d349a2b8981c629f
+vendor/lib64/egl/libq3dtools_esx.so|80c6209fe1879e3ee0fcf85b787578194e5a6479
 vendor/lib64/libC2D2.so|6fb775e393ce7161b30e3a71fa0f320e86374425
-vendor/lib64/libCB.so|34de1a0be06c6f608eafac180229bdbc0f95bc3f
+vendor/lib64/libCB.so|c2087aeec0ccdf8c80b55b94a1bbe12ee7bba101
 vendor/lib64/libOpenCL.so|d7bf2dd573f3cea80a0c452801ab9dc495ccfae7
-vendor/lib64/libadreno_utils.so|e700c87cfa8aaf297ffa5a2f39298db5784ac55d
+vendor/lib64/libadreno_utils.so|17bacbdee0bbd407a1a2ad6ad242a115f9f29fea
 vendor/lib64/libc2d30_bltlib.so|8c8fef67e346be907e1f9b312d11a1e9606ad6f0
-vendor/lib64/libgpudataproducer.so|e95a2fbe1edb4998945a3694519af71fc3da3772
-vendor/lib64/libgsl.so|367ccbf34f96fb52f185ebc3ccda9f97e41aa91b
+vendor/lib64/libgpudataproducer.so|5bf17f8718b57b2b896cfe04e9f13fdc7d6b3ca8
+vendor/lib64/libgsl.so|2992913622b0978c60bf821bfe250246a628fea3
 vendor/lib64/libhdr_tm.so|cfd5f03dd37b5b6fb46d288bed619b780ec7343e
-vendor/lib64/libllvm-glnext.so|e249c94bd2109b50a68e761809853426298ebaf2
+vendor/lib64/libllvm-glnext.so|b16b4272801e5cf803ad1c30399348bfe234efa3
 vendor/lib64/libllvm-qcom.so|e752fbc6a0d079b40e6fc52e1c0c6e3883fcc15a
 vendor/lib64/libmm-hdcpmgr.so|14ba633fbef35ad3c684a440abb15d9e2c300537
 vendor/lib64/libpvr.so|b9d38b4d340e66a1d89861ce552f0405ce9bfa11
 vendor/lib64/librs_adreno.so|d8bee70cc12ab5c6a979427e24fb7843fddae08b
-vendor/lib64/libVkLayer_q3dtools.so|fe77120dcbdfe49d36b1615678ddcb505fe99bf1
+vendor/lib64/libVkLayer_q3dtools.so|499d11ab24d302f752840c761653b97526dd3b59
 
-# Graphics (Postprocessing) - from LA.UM.9.6.2.r1-03300-89xx.0
+# Graphics (Postprocessing) - from LA.UM.9.6.2.r1-03600-89xx.0
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 framework/com.qti.snapdragon.sdk.display.jar|657b74d0517f6438d3e0914f92f3b8de6d2a10a1
 system_ext/lib/vendor.display.color@1.0.so|1e86215aff5b4f5117a2884fe734017ab7af81e3
@@ -350,7 +350,7 @@ vendor/lib64/vendor.display.color@1.2.so|9d8a103b13bbae99cc5513251b4f8f361eb17d6
 vendor/lib64/vendor.display.postproc@1.0.so|9d70df811e194e4dc6dce9a6a0c87cd74c507e9d
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|3b9a0b71944c6b8d9a0b3a976a9ff09ba3864fb4
 
-# Graphics (SDM) - from LA.UM.9.6.2.r1-03300-89xx.0
+# Graphics (SDM) - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/libscalar.so|835649ab934f93d545059fd08040c6acbf7f3d1b
 vendor/lib/libsdm-color.so|76531589416b881b636c8f55b0c1dd342113fc5b
 vendor/lib/libsdm-diag.so|51172407a6bdaad3493fe5b9c80e8df07d12732c
@@ -432,10 +432,10 @@ vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 vendor/lib64/libswvdec.so|f2ca69b50c339ce350eb4e6c151db19de3e5c9a9
 vendor/lib64/libvpplibrary.so|592e8d104185ab798e9730f510bdefb36323ad0a
 
-# Perf - from LA.UM.9.6.2.r1-03300-89xx.0
-system_ext/lib/libqti-perfd-client_system.so|3c5c40577be60a47ca82fd6d8275dfc93747e663
+# Perf - from LA.UM.9.6.2.r1-03600-89xx.0
+system_ext/lib/libqti-perfd-client_system.so|79be2c728553c6c065a82441a9b4f7a32384f862
 system_ext/lib/libqti_performance.so|23ac6a73d51d9a9a5c4e952d0d5cb44441e9df8b
-system_ext/lib64/libqti-perfd-client_system.so|613cd6830709dcb997600ef6c50900f87ed52285
+system_ext/lib64/libqti-perfd-client_system.so|6d77f53f2940bde26b3629035d7793e211d93d87
 system_ext/lib64/libqti_performance.so|49ffda3e601d39d13755aef0839617fa6bbf5306
 system_ext/lib/vendor.qti.hardware.perf@2.0.so|b61a2a19ff74b9362d16efed038f5eb7c2fe38a1
 system_ext/lib/vendor.qti.hardware.perf@2.1.so|cdf2ce59500193c7d6f09ffb33991663cc4d8adb
@@ -444,33 +444,33 @@ system_ext/lib64/vendor.qti.hardware.perf@2.0.so|36410d136f510ae998641f668c14167
 system_ext/lib64/vendor.qti.hardware.perf@2.1.so|75f4f3ab0d2abdf8dab5aa81865707fe82fec0be
 system_ext/lib64/vendor.qti.hardware.perf@2.2.so|3f4ee88be26b872fd6fa170c69d8f923f54477b1
 vendor/bin/msm_irqbalance|c0910fb319bb8287f176f26078241299455baad0
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|ee4e94185a8362ee3216ec77d121124cfa4b0ecd
+vendor/bin/hw/vendor.qti.hardware.perf@2.2-service|5d30808301c7e90cb70478f6f7e38ac593e8cfdf
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc|459b4c23550a56ac545f78c6d391f3d7dd9ba45b
-vendor/lib64/libadaptlaunch.so|e2f1689eecd6c0110b228cb45b75931b4ba0bc8d
-vendor/lib64/libappclassifier.so|3aad9efb1a1a3ec8113a092eda55ee13aa8db1c4
-vendor/lib64/libgameoptfeature.so|90107bb1f5610253d48314cf87cbdbc3ebee267d
-vendor/lib64/liblearningmodule.so|6317a1a6e524b86cf0ba8b152689d4de2aecde95
-vendor/lib64/libmeters-ns.so|4526025da764d0d6a63e7c706841d9dd2077a1f4
+vendor/lib64/libadaptlaunch.so|509dc874442288252e413a7a888c140b9837d291
+vendor/lib64/libappclassifier.so|30dfa44f6c083ead08cd691e8e305ee8c7a959fe
+vendor/lib64/libgameoptfeature.so|9c339d1519148a81c52c3402ed603d8edac85fc2
+vendor/lib64/liblearningmodule.so|fad91d569df872b9ff6c3b0a8d023bce6ba54133
+vendor/lib64/libmeters-ns.so|30e9127f8fbc965ab0eca73b75c96fd1c1b61431
 vendor/lib64/libmeters.so|d5c9a4605bd2f631d6b0eb3c3cbb1f5fb8629114
-vendor/lib64/libperfconfig.so|082055646d2fffcf0120d23ca152d56c903ebd41
-vendor/lib64/libperfgluelayer.so|60f7bf4b8dc386d7db7ddb445436be6cf1f84922
-vendor/lib64/libqti-perfd.so|cdd82b3c3a6f305946d8feb35a413f08b00c714f
-vendor/lib64/libqti-perfd-client.so|d6502c16ab4dd7642641b6a8cbb061847ff5cb2d
+vendor/lib64/libperfconfig.so|077b47e0a5562ecfb0c7274833e8c4e4c9455690
+vendor/lib64/libperfgluelayer.so|f0c16ae2eba0bf355e5ffd194f945f4924cf7d46
+vendor/lib64/libqti-perfd.so|3446c05a2ad52222b339f47d4c6d6b85198e2b2d
+vendor/lib64/libqti-perfd-client.so|cf1db630be11536a27a0ac66646c0024d78c80f7
 vendor/lib64/libqti-util.so|834cc98315887e57a5f229f9ee1a0d20d0d8f4c3
 vendor/lib64/libqti-utils.so|e734331e086c9b78852871312429ce69092775ca
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|72b78413ee1d6fbfb38c58942d224c7f8f0cf00b
 vendor/lib64/vendor.qti.hardware.perf@2.1.so|65a22320eace1f7781510de4c7f21185773c7fc3
 vendor/lib64/vendor.qti.hardware.perf@2.2.so|9504a8618f79ceba7f4dad838c80f8804210a806
-vendor/lib/libperfconfig.so|4783a38dd417c9bd9c8ed2257f7ea071870f4089
-vendor/lib/libperfgluelayer.so|5e6c2681cdfda6c33ea788826089bf25d6ae917e
-vendor/lib/libqti-perfd.so|98835705f8ac0409ab5d78b7a52710c3c8d3f327
-vendor/lib/libqti-perfd-client.so|4fec2515f09cf18704e2501da071c7a28d4a61c7
+vendor/lib/libperfconfig.so|64bcaec5ae84c557b09098d6f095968fa58cd72b
+vendor/lib/libperfgluelayer.so|3570e47f1f84c2854a6cee5eec159b20ebf20f22
+vendor/lib/libqti-perfd.so|60275da4d9e2e71f91d8841ece26b11eb8e77248
+vendor/lib/libqti-perfd-client.so|35c5fb10e0dfc1302460200f7757c3329eb42280
 vendor/lib/libqti-util.so|b90cf5d6dab54445906fd94447d6d624586865ed
 vendor/lib/vendor.qti.hardware.perf@2.0.so|280749be351cb0c26c0c6ee324615b77ea1b15f4
 vendor/lib/vendor.qti.hardware.perf@2.1.so|e7719a0ba123103f06c51cd985f10f3f8c3aa4c3
 vendor/lib/vendor.qti.hardware.perf@2.2.so|4f4f2fd8784bc9e07b432978e0397c02868ac8f6
 
-# Perf (IOP) - from LA.UM.9.6.2.r1-03300-89xx.0
+# Perf (IOP) - from LA.UM.9.6.2.r1-03600-89xx.0
 system_ext/lib/libqti-iopd-client_system.so|6b510018995acf38e44736749027064d37189390
 system_ext/lib64/libqti-iopd-client_system.so|af55411ae2f911fcf698f80cd2563ecd1215f706
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so|4d1b8e578c885ce13f4c80ec6a87437cb5d35bc5
@@ -482,14 +482,14 @@ vendor/lib64/libqti-iopd-client.so|512e12a6a86eb2dc5ad73a590c996d0e67e2ec1a
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|68b541490d75f1bedd6ebae09ce5e0d5bf563890
 vendor/lib64/vendor.qti.hardware.iop@2.0.so|9ebadf4f9ac445fa0a767d33d1fe1cd6d64d9190
 
-# Perf configs - from Olive 10/QKQ1.191014.001
-vendor/etc/perf/commonresourceconfigs.xml|dba11b76c50adf85eb7684e5fe566f31cbd10b39
-vendor/etc/perf/perfboostsconfig.xml|6f897a2bae11272c7f607036993727ad88dcaa05
-vendor/etc/perf/perfconfigstore.xml|331ebe56f187b44c9bb279414dbab6aff09f6c47
+# Perf configs - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/etc/perf/commonresourceconfigs.xml|47651621904d0a0ea42b72bc9a0df27f99eaeab6
+vendor/etc/perf/perfboostsconfig.xml|618e52bd61709c940839086f5f5fb1dd3aa01ca2
+vendor/etc/perf/perfconfigstore.xml|a53be50dbf91c78daf1cddcd3539ffc8ea0902c0
 vendor/etc/perf/perf-profile0.conf|02204355bf29ceb0460cd53e6716552bb9d9b05f
 vendor/etc/perf/perf-profile1.conf|5ce649b26b71048734b797af7340d9f7f7b83ca0
 vendor/etc/perf/targetconfig.xml|6106b22017b4e759c5804d12f439d2d09d567706
-vendor/etc/perf/targetresourceconfigs.xml|1817b8766a5b70c40c302f0add16a783fde135a4
+vendor/etc/perf/targetresourceconfigs.xml|d72216867a557eb37b14a1975da40ff0225b6c55
 
 # Peripheral manager - from LA.UM.9.6.2.r1-03300-89xx.0
 vendor/bin/pm-proxy|08a2ac87306f772c62e5ef997ab6d021f450f33c
@@ -702,10 +702,10 @@ vendor/lib64/libsensor1.so|ecd936e78d9ba35878cb0bfbff38289e8651ac8d
 vendor/lib64/libsensor_reg.so|4550e44b37ce57db92bb379e9c65ece68c802d1e
 vendor/lib64/sensors.ssc.so|92f6c3da84c8790778b78b5dfa8593e12c940494
 
-# Thermal - from Olive 10/QKQ1.191014.001
-vendor/bin/thermal-engine|633b9cff05ba176a18101bdfc03ecacc98e1e0f0
--vendor/lib/libthermalclient.so|8837ba9f8f43d4cfbec00d8055fef4c9a7434931
--vendor/lib64/libthermalclient.so|148421212c4b2d3bcb37cb08f9542d3286f008c1
+# Thermal - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/bin/thermal-engine|4939d0127123d988ef4ec2c3eab201541dfe738a
+-vendor/lib/libthermalclient.so|248fda00d69a626ee8e24159b704a6ae95eceb99
+-vendor/lib64/libthermalclient.so|d042cc537de4950837a5b928f6283fb238a9c59c
 vendor/lib64/libthermalioctl.so|6eed5b8ca6989809eac27abd4af19bbd6f3845ee
 vendor/lib64/libthermalfeature.so|1c408911610e5b6a11853aff1900860f9e9a861f
 
