@@ -290,6 +290,9 @@ case "$console_config" in
     echo "Enable console config to $console_config"
     ;;
 esac
+    
+# Enable power efficient workqueue
+echo Y > /sys/module/workqueue/parameters/power_efficient
 
 # Parse misc partition path and set property
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
