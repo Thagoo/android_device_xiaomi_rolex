@@ -170,7 +170,8 @@ PRODUCT_PACKAGES += \
     libgenlock \
     libtinyxml \
     libqdMetaData \
-    libqdMetaData.vendor
+    libqdMetaData.vendor \
+    vendor.display.config@2.0
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
