@@ -1,3 +1,4 @@
+allow init proc_last_kmsg:file setattr;
 # adsprpcd
 allow init adsprpcd_file:filesystem { getattr mount relabelfrom relabelto };
 
