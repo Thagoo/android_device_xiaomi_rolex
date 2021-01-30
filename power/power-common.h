@@ -39,7 +39,7 @@
 #define MPDECISION_SLACK_MIN_NODE "/sys/module/msm_mpdecision/slack_time_min_us"
 #define SCALING_MIN_FREQ "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
 #define ONDEMAND_GOVERNOR "ondemand"
-#define INTERACTIVE_GOVERNOR "interactive"
+#define INTERACTIVE_GOVERNOR "schedutil"
 #define MSMDCVS_GOVERNOR "msm-dcvs"
 
 #define HINT_HANDLED (0)
@@ -55,7 +55,7 @@ enum CPU_GOV_CHECK {
 };
 
 enum {
-    PROFILE_POWER_SAVE = 0,
+    PROFILE_POWER_SAVE = 1,
     PROFILE_BALANCED,
     PROFILE_HIGH_PERFORMANCE,
     PROFILE_BIAS_POWER,

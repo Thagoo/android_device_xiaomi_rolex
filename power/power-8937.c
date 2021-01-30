@@ -58,7 +58,7 @@ static int video_encode_hint_sent;
 
 extern void interaction(int duration, int num_args, int opt_list[]);
 
-static int current_power_profile = PROFILE_BALANCED;
+static int current_power_profile = PROFILE_POWER_SAVE;
 
 static int profile_high_performance[] = {
     SCHED_BOOST_ON_V3, 0x1,
