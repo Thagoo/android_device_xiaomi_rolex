@@ -189,13 +189,13 @@ set_speaker_light_locked(struct light_device_t* dev,
     }
 
     colorRGB = state->color;
-
-#ifdef WHITE_LED
-    colorRGB = 16711680;
-
-    if ( !(state->color & 0xFFFFFF) )
-      colorRGB  = state->color;
-#endif
+    
+    char led_white_only[PROPERTY_VALUE_MAX] = {'\0', };
+    if (property_get("ro.led.white_led", led_white_only, "") > 0) {
+	    colorRGB = 16711680;
+	    if ( !(state->color & 0xFFFFFF) )
+      		    colorRGB  = state->color;
+    }
 
 #if 0
     ALOGD("set_speaker_light_locked mode %d, colorRGB=%08X, onMS=%d, offMS=%d\n",
