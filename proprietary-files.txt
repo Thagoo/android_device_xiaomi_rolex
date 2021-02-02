@@ -1972,6 +1972,10 @@ vendor/lib/libmmcamera_ubifocus_lib.so|205a368637b280cb8dbbe4ca6bfd1885078689a2
 lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|53830d64d63d6cc405209d8d4cafea102dcd7b54
 lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|d5145eb1712c8e0895016282f3e348c98ad17f7b
 
+# Consumer (IR) Riva - from riva Oreo
+vendor/lib/hw/consumerir.default.so:vendor/lib/hw/riva/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/riva/consumerir.default.so
+
 # Display calibration - from MIUI Stable - V10.2.3.0.NCCMIXM
 etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml:vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml|1483bbcd78dfaa723c0c15caad7f1cbce41fdf1d
 etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml:vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3a.xml|814bc2ee08678f07a2065a4e911964c1fd5a298a

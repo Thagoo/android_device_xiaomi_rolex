@@ -250,3 +250,7 @@ on property:hw.fm.init=*
 on property:ro.product.vendor.device=riva
     mount none /vendor/etc/riva/mixer_paths_qrd_sku2.xml /vendor/etc/mixer_paths_qrd_sku2.xml bind
     restart vendor.audio-hal
+    # Consumer IR
+    mount none /vendor/lib/hw/riva/consumerir.default.so /vendor/lib/hw/consumerir.default.so bind
+    mount none /vendor/lib64/hw/riva/consumerir.default.so /vendor/lib64/hw/consumerir.default.so bind
+    restart vendor.ir-hal-1-0
