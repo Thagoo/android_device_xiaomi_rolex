@@ -245,3 +245,8 @@ on boot
 # FM radio
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
+
+# Audio (riva)
+on property:ro.product.vendor.device=riva
+    mount none /vendor/etc/riva/mixer_paths_qrd_sku2.xml /vendor/etc/mixer_paths_qrd_sku2.xml bind
+    restart vendor.audio-hal
