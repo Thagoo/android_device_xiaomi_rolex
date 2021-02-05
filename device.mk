@@ -18,7 +18,7 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-wave
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -417,6 +417,15 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
+
+# Vanilla 
+ifeq ($(VANILLA_BUILD),true)
+PRODUCT_PACKAGES += \
+    Calender \
+    DeskClock \
+    messaging \
+    Music
+endif
 
 # Vibrator
 PRODUCT_PACKAGES += \

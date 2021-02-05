@@ -1,0 +1,19 @@
+[
+  {
+    "remote": "github",
+    "repository": "Lineageos/android_hardware_sony_timekeep",
+    "branch": "lineage-18.1",
+    "target_path": "hardware/sony/timekeep"
+  },
+{
+    "remote": "github",
+    "repository": "android_packages_apps_FMRadio",
+    "branch": "lineage-18.1",
+    "target_path": "packages/apps/FMRadio"
+  },
+  {
+    "repository": "packages_apps_Snap",
+    "branch": "r",
+    "target_path": "packages/apps/Snap"
+  }
+]
