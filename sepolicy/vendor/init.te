@@ -15,4 +15,5 @@ allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
 # blkio
 allow init blkio_dev:file { create open read write };
 
-
+# sysfs_batteryinfo
+allow init sysfs_batteryinfo:file setattr;
