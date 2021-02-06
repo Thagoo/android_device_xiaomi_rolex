@@ -5,6 +5,7 @@ allow system_server hal_light_default:process signal;
 get_prop(system_server, exported_camera_prop);
 get_prop(system_server, userspace_reboot_config_prop);
 get_prop(system_server, userspace_reboot_exported_prop);
+allow system_server app_zygote:process getpgid;
 
 # Allow system server to read last_kmsg file
 allow system_server proc_last_kmsg:file r_file_perms;
