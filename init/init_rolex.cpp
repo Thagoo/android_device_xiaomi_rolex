@@ -1,7 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
-   Copyright (c) 2017, The XPerience Project
-   Copyright (c) 2020, The LineageOS Project
+   Copyright (c) 2019, The LineageOS Project
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -29,27 +28,26 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <android-base/file.h>
-#include <android-base/logging.h>
+#include <cstdlib>
+#include <fstream>
+#include <string.h>
+#include <sys/sysinfo.h>
+#include <unistd.h>
+
 #include <android-base/properties.h>
-#include <android-base/strings.h>
-#include <fcntl.h>
-#include <iostream>
-#include <sstream>
-#include <stdlib.h>
-#include <string>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
-#include <sys/sysinfo.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
+#include "property_service.h"
 
 using android::base::GetProperty;
+int property_set(const char *key, const char *value) {
+	    return __system_property_set(key, value);
+}
 
-static std::string board_id;
-
-static void property_override(char const prop[], char const value[]) {
+void property_override(char const prop[], char const value[])
+{
     prop_info *pi;
 
     pi = (prop_info*) __system_property_find(prop);
@@ -65,30 +63,26 @@ static bool is3GBram() {
     return sys.totalram > 2048ull * 1024 * 1024;
 }
 
-static void import_kernel_cmdline_rolex(bool in_qemu,
-                           const std::function<void(const std::string&, const std::string&, bool)>& fn) {
-    std::string cmdline;
-    android::base::ReadFileToString("/proc/cmdline", &cmdline);
-    for (const auto& entry : android::base::Split(android::base::Trim(cmdline), " ")) {
-        std::vector<std::string> pieces = android::base::Split(entry, "=");
-        /* The board_id entry has two equal signs, so accept more than two pieces */
-        if (pieces.size() >= 2) { // original -> == 2
-            fn(pieces[0], pieces[1], in_qemu);
-        }
-    }
-}
+void init_target_properties()
+{
+    std::ifstream fin;
+    std::string buf;
+    fin.open("/proc/cmdline");
+    while (std::getline(fin, buf, ' '))
+      if (buf.find("board_id") != std::string::npos)
+          break;
+    fin.close();
 
-static void parse_cmdline_boardid(const std::string& key,
-        const std::string& value, bool for_emulator __attribute__((unused))) {
-    if (key.empty())
-        return;
+    if (buf.find("S88503") != std::string::npos) {
+        property_override("ro.product.model", "Redmi 4A");
+        property_override("ro.vendor.build.fingerprint", "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys");
 
-    /* Here our value is board_id:board_vol; we only want the first part */
-    if (key == "board_id") {
-        std::istringstream iss(value);
-        std::string token;
-        std::getline(iss, token, ':');
-        board_id = token;
+    } else {
+        property_override("ro.product.model", "Redmi 5A");
+	property_override("ro.product.vendor.device", "riva");
+        property_override("ro.vendor.build.fingerprint", "Xiaomi/riva/riva:7.1.2/N2G47H/V9.5.6.0.NCKMIFA:user/release-keys");
+	// Specify LED Color is White Only
+	property_override("ro.led.white_led", "1");
     }
 }
 
@@ -110,38 +104,8 @@ static void set_ramconfig() {
     }
 }
 
-static void variant_properties() {
-    std::string product = GetProperty("ro.product.name", "");
-    if (product.find("rolex") == std::string::npos)
-        return;
-
-    // Get board_id from cmdline
-    import_kernel_cmdline_rolex(false, parse_cmdline_boardid);
-
-    // Set board id
-    property_override("ro.product.wt.boardid", board_id.c_str());
-
-    // Set variant based on board_id
-    if (board_id == "S88503") {
-        property_override("ro.product.model", "Redmi 4A");
-        property_override("ro.product.vendor.model", "Redmi 4A");
-    } else {
-	property_override("ro.product.device", "riva");
-
-	property_override("ro.product.vendor.device", "riva");
-		 
-	property_override("ro.product.model", "Redmi 5A");
-	property_override("ro.product.vendor.model", "Redmi 5A");
-        property_override("ro.vendor.build.fingerprint", "Xiaomi/riva/riva:7.1.2/N2G47H/V9.5.6.0.NCKMIFA:user/release-keys");
-	property_override("ro.product.product.device", "riva");
-	property_override("ro.product.product.model", "Redmi 5A");
-	property_override("ro.product.product.name", "riva");
-	// Specify LED Color is White Only
-	property_override("ro.led.white_led", "1");
-    }	 
-}
-
-void vendor_load_properties() {
+void vendor_load_properties()
+{
+    init_target_properties();
     set_ramconfig();
-    variant_properties();
 }
