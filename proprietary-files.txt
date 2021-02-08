@@ -1689,7 +1689,7 @@ vendor/lib/libchromatix_sony_imx486_ii_india_cpp_snapshot_hht.so|8d336bcfe5b1338
 
 
 # Camera configs - from MIUI Stable - V10.2.3.0.NCCMIXM
-etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|47493a854aac817a0314240241173cd38efbe45d
+etc/camera/camera_config.xml:vendor/etc/camera/camera_config.xml|3c9c4423d312c376c4a80be62be2b8ca349c3609
 etc/camera/csidtg_camera.xml:vendor/etc/camera/csidtg_camera.xml|406e2dec13dc910415ff72fc5a7ee084c97ab61f
 etc/camera/imx214_chromatix.xml:vendor/etc/camera/imx214_chromatix.xml|c27c3a806a18dfa693c186dbf5fdf48f715acacb
 etc/camera/imx230_chromatix.xml:vendor/etc/camera/imx230_chromatix.xml|5fc002e42292f302f4e5d0f45f94d5e35c6e0821
@@ -1973,8 +1973,8 @@ lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|53830d64d63d6cc
 lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|d5145eb1712c8e0895016282f3e348c98ad17f7b
 
 # Consumer (IR) Riva - from riva Oreo
-vendor/lib/hw/consumerir.default.so:vendor/lib/hw/riva/consumerir.default.so
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/riva/consumerir.default.so
+vendor/lib/hw/consumerir.default.so:vendor/lib/hw/riva/consumerir.default.so|b2e014de968f65e013b4dae3fad67f16aa3b0a09
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/riva/consumerir.default.so|bed46204c8200d5f0ec1b37c14ecbc06f424db93
 
 # Display calibration - from MIUI Stable - V10.2.3.0.NCCMIXM
 etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml:vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3a.xml|1483bbcd78dfaa723c0c15caad7f1cbce41fdf1d
