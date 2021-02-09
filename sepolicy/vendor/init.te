@@ -17,3 +17,10 @@ allow init blkio_dev:file { create open read write };
 
 # sysfs_batteryinfo
 allow init sysfs_batteryinfo:file setattr;
+
+# Allow to mount riva specific files
+allow init { 
+    vendor_configs_file 
+    vendor_file 
+}:file mounton;
+
