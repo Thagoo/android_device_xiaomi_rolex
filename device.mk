@@ -361,6 +361,8 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # QTI common
+TARGET_BOARD_PLATFORM += msm8937
+
 TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
