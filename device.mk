@@ -428,8 +428,8 @@ ifeq ($(VANILLA_BUILD),true)
 PRODUCT_PACKAGES += \
     Calender \
     DeskClock \
-    messaging \
-    Music
+    ExactCalcualtor \
+    messaging
 endif
 
 # Vibrator
