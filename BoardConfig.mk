@@ -18,6 +18,11 @@
 
 DEVICE_PATH := device/xiaomi/rolex
 
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH) \
+    vendor/xiomi/rolex \
+    kernel/xiaomi/msm8917
+
 # Architecture
 TARGET_ARCH 	    	:= arm64
 TARGET_ARCH_VARIANT 	:= armv8-a
