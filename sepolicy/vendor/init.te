@@ -24,3 +24,6 @@ allow init {
     vendor_file 
 }:file mounton;
 
+# iorapd
+allow init iorapd_data_file:file getattr;
+

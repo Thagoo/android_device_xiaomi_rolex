@@ -2,3 +2,6 @@ allow system_app { proc_pagetypeinfo sysfs_zram }:file r_file_perms;
 allow system_app proc_vmallocinfo:file r_file_perms;
 allow system_app sysfs_zram:dir r_dir_perms;
 binder_use(system_app)
+
+# Fm radio
+allow system_app fm_radio_device:chr_file r_file_perms;
