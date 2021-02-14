@@ -73,16 +73,11 @@ void init_target_properties()
           break;
     fin.close();
 
-    if (buf.find("S88503") != std::string::npos) {
-        property_override("ro.product.model", "Redmi 4A");
-        property_override("ro.vendor.build.fingerprint", "Xiaomi/rolex/rolex:7.1.2/N2G47H/V9.2.6.0.NCCMIEK:user/release-keys");
-
-    } else {
+    if (buf.find("S88505") != std::string::npos) {
         property_override("ro.product.model", "Redmi 5A");
-	property_override("ro.product.device", "riva");
-	property_override("ro.product.vendor.device", "riva");
-        property_override("ro.vendor.build.fingerprint", "Xiaomi/riva/riva:7.1.2/N2G47H/V9.5.6.0.NCKMIFA:user/release-keys");
-	// Specify LED Color is White Only
+        property_override("ro.product.device", "riva");
+        property_override("ro.product.vendor.device", "riva");
+    	// Specify LED Color is White Only
 	property_override("ro.led.white_led", "1");
     }
 }
