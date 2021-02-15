@@ -25,13 +25,5 @@
    {
       "repository":"packages_apps_Snap",
       "target_path":"packages/apps/Snap"
-   },
-   {
-      "repository":"packages_apps_DeskClock",
-      "target_path":"packages/apps/DeskClock"
-   },
-   {
-      "repository":"packages_apps_ExactCalculator",
-      "target_path":"packages/apps/ExactCalculator"
    }
 ]
