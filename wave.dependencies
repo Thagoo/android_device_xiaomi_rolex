@@ -17,12 +17,6 @@
       "target_path":"hardware/sony/timekeep"
    },
    {
-      "remote":"lineage",
-      "repository":"android_packages_apps_FMRadio",
-      "branch":"lineage-18.1",
-      "target_path":"packages/apps/FMRadio"
-   },
-   {
       "repository":"packages_apps_Snap",
       "target_path":"packages/apps/Snap"
    }
