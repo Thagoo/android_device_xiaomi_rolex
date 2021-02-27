@@ -255,10 +255,8 @@ vendor/lib64/liblowi_wifihal.so|6a857d771ca8a284c9adf7fcc9edf36bb179177c
 vendor/lib64/libslimclient.so|1ab57b58064fce9e738c4cd815d2620a113641e3
 vendor/lib64/libxtadapter.so|48cc26710658fc4e704e4cee73187166d1d2bce6
 vendor/lib64/libqcc_file_agent.so|3975917c7f591f2748d5ef89bd8ec13605f38945
-vendor/lib64/libavservices_minijail.so|c1ccd1e8cfb049c4c3dd8ef8b79364da17a41513
 vendor/lib64/libcdfw_remote_api.so|751452d4d3aca9783e27226ba095a6c3e402937f
 vendor/lib/libcdfw_remote_api.so|679453122082359b365b9bd45396c524feb49a35
-vendor/lib/libavservices_minijail.so|4613c69e6490b949bc6ba22470353c8a9d67ba91
 vendor/lib/vendor.qti.gnss@1.0.so|01b374f4daa7e8156b8f6c4495eb88083a63777d
 vendor/lib/vendor.qti.gnss@1.1.so|3af913841007ee92f4033fdeba534028e04dc448
 vendor/lib/vendor.qti.gnss@1.2.so|eea002757ad41e5e3e135a6f1ed5e1b9822de9bd
