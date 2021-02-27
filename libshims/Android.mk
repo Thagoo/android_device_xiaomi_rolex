@@ -58,18 +58,3 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := camera/camera.cpp
-
-LOCAL_SHARED_LIBRARIES := \
-  libgui \
-  libui
-
-LOCAL_C_INCLUDES := \
-    frameworks/native/include
-
-LOCAL_MODULE := libshim_libmmcamera
-LOCAL_MODULE_TAGS := optional
-
-include $(BUILD_SHARED_LIBRARY)
