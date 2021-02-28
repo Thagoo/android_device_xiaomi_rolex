@@ -165,6 +165,7 @@ TARGET_TAP_TO_WAKE_NODE := "proc/gesture/onoff"
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 
 # FM
 BOARD_HAVE_QCOM_FM                 := true
