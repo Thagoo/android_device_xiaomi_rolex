@@ -43,6 +43,9 @@ fi
 
 setprop vendor.gralloc.disable_ahardware_buffer 1
 
+# Disable adsprpcd_sensorspd daemon
+setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
+
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
 # Loop through the sysfs nodes and determine
