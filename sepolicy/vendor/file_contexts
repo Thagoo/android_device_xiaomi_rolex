@@ -32,10 +32,6 @@
 # Thermal
 /vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.qti      u:object_r:hal_thermal_default_exec:s0
 
-# TimeKeep
-/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?                        u:object_r:sysfs_rtc:s0
-/(system/vendor|vendor)/bin/timekeep                                 u:object_r:timekeep_exec:s0
-
 # Lights / IR Blaster
 /sys/devices(/platform)?/soc/[a-z0-9]+\.sdhci/leds(/.*)?                                u:object_r:sysfs_leds:s0
 /sys/devices(/platform)?/soc/[a-z0-9]+\.i2c/i2c-[0-9]+/[0-9]+-[a-z0-9]+/leds(/.*)?      u:object_r:sysfs_leds:s0

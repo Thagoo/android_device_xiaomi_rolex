@@ -1,7 +1,4 @@
 persist.camera.                    u:object_r:camera_prop:s0
 
-# TimeKeep
-persist.vendor.timeadjust          u:object_r:vendor_timekeep_prop:s0
-
 # Thernal
 vendor.thermal.config           u:object_r:vendor_thermal_prop:s0

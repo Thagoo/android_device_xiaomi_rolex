@@ -11,12 +11,6 @@
       "clone-depth":"1"
    },
    {
-      "remote":"github",
-      "repository":"Lineageos/android_hardware_sony_timekeep",
-      "branch":"lineage-18.1",
-      "target_path":"hardware/sony/timekeep"
-   },
-   {
       "repository":"packages_apps_Snap",
       "target_path":"packages/apps/Snap"
    }

@@ -1,5 +1,2 @@
-# TimeKeep
-type vendor_timekeep_prop, property_type;
-
 # Thermal
 type vendor_thermal_prop, property_type;
