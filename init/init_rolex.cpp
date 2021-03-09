@@ -98,6 +98,8 @@ static void set_ramconfig() {
         property_override("dalvik.vm.heaptargetutilization", "0.75");
         property_override("dalvik.vm.heapminfree", "2m");
         property_override("dalvik.vm.heapmaxfree", "8m");
+	// Reduce memory footprint
+	property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
 
