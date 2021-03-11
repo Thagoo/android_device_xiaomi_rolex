@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020 The Linux Foundation. All rights reserved.
+ * Copyright (c) 2020, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -27,30 +27,27 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ANDROID_HARDWARE_POWER_POWER_H
-#define ANDROID_HARDWARE_POWER_POWER_H
+#include "Power.h"
 
-#include <aidl/android/hardware/power/BnPower.h>
-#include "power-common.h"
+#include <android-base/logging.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
 
-namespace aidl {
-namespace android {
-namespace hardware {
-namespace power {
-namespace impl {
+using aidl::android::hardware::power::impl::Power;
 
-class Power : public BnPower {
-  public:
-    Power() : BnPower() { power_init(); }
-    ndk::ScopedAStatus setMode(Mode type, bool enabled) override;
-    ndk::ScopedAStatus isModeSupported(Mode type, bool* _aidl_return) override;
-    ndk::ScopedAStatus setBoost(Boost type, int32_t durationMs) override;
-    ndk::ScopedAStatus isBoostSupported(Boost type, bool* _aidl_return) override;
-};
+int main() {
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
+    std::shared_ptr<Power> vib = ndk::SharedRefBase::make<Power>();
+    const std::string instance = std::string() + Power::descriptor + "/default";
+    LOG(INFO) << "Instance " << instance;
+    if (vib) {
+        binder_status_t status = AServiceManager_addService(vib->asBinder().get(), instance.c_str());
+        LOG(INFO) << "Status " << status;
+        if (status != STATUS_OK) {
+            LOG(ERROR) << "Could not register" << instance;
+        }
+    }
 
-}  // namespace impl
-}  // namespace power
-}  // namespace hardware
-}  // namespace android
-}  // namespace aidl
-#endif  // ANDROID_HARDWARE_POWER_POWER_H
+    ABinderProcess_joinThreadPool();
+    return 1;  // should not reach
+}

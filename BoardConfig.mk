@@ -227,6 +227,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

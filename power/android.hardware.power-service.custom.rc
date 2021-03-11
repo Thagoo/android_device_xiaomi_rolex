@@ -1,0 +1,4 @@
+service vendor.power-hal /vendor/bin/hw/android.hardware.power-service.custom
+    class hal
+    user system
+    group system input

@@ -12,7 +12,7 @@
 # /vendor/bin/chargeonlymode                      u:object_r:charger_exec:s0
 
 # HIDL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service\.custom                         u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.custom                         u:object_r:hal_power_default_exec:s0
 
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0

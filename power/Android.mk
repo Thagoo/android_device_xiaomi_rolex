@@ -22,26 +22,24 @@ ifeq ($(call is-vendor-board-platform,QCOM),true)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
+
 LOCAL_SHARED_LIBRARIES := \
     liblog \
     libcutils \
     libdl \
-    libxml2 \
-    libhidlbase \
-    libhardware \
-    libutils
+    libbase \
+    libutils \
+    android.hardware.power-ndk_platform \
+    libbinder_ndk
 
 LOCAL_SRC_FILES := \
-    service.cpp \
-    Power.cpp \
-    power-helper.c \
+    power-common.c \
+    metadata-parser.c \
     utils.c \
     list.c \
     hint-data.c \
-    powerhintparser.c
-
-LOCAL_C_INCLUDES := external/libxml2/include \
-                    external/icu/icu4c/source/common
+    Power.cpp \
+    main.cpp
 
 # Include target-specific files.
 ifeq ($(call is-board-platform-in-list,msm8937), true)
@@ -77,13 +75,15 @@ ifneq ($(TARGET_RPM_SYSTEM_STAT),)
     LOCAL_CFLAGS += -DRPM_SYSTEM_STAT=\"$(TARGET_RPM_SYSTEM_STAT)\"
 endif
 
-LOCAL_MODULE := android.hardware.power@1.1-service.custom
-LOCAL_INIT_RC := android.hardware.power@1.1-service.custom.rc
+LOCAL_MODULE := android.hardware.power-service.custom
+LOCAL_INIT_RC := android.hardware.power-service.custom.rc
 LOCAL_SHARED_LIBRARIES += android.hardware.power@1.1
-
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := qcom
 LOCAL_VENDOR_MODULE := true
+LOCAL_MODULE_TAGS := optional
+LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable
+LOCAL_VINTF_FRAGMENTS := power.xml
 LOCAL_HEADER_LIBRARIES := libhardware_headers
 include $(BUILD_EXECUTABLE)
 
