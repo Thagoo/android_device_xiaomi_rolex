@@ -319,6 +319,10 @@ vendor/lib64/libpvr.so|b9d38b4d340e66a1d89861ce552f0405ce9bfa11
 vendor/lib64/librs_adreno.so|d8bee70cc12ab5c6a979427e24fb7843fddae08b
 vendor/lib64/libVkLayer_q3dtools.so|499d11ab24d302f752840c761653b97526dd3b59
 
+# Graphics (adreno) - from LA.UM.8.6.2.r1-08400-89xx.0
+vendor/lib/libRSDriver_adreno
+vendor/lib64/libRSDriver_adreno
+
 # Graphics (Postprocessing) - from LA.UM.9.6.2.r1-03600-89xx.0
 etc/permissions/com.qti.snapdragon.sdk.display.xml|0bff16d681e75f203c1e11ff33afba82490e49b3
 framework/com.qti.snapdragon.sdk.display.jar|657b74d0517f6438d3e0914f92f3b8de6d2a10a1
