@@ -7,7 +7,7 @@
       "repository":"Thagoo/platform_kernel_xiaomi_msm8917",
       "target_path":"kernel/xiaomi/msm8917",
       "remote":"github",
-      "branch":"lineage-18.1",
+      "branch":"r",
       "clone-depth":"1"
    },
    {
