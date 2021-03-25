@@ -13,5 +13,11 @@
    {
       "repository":"packages_apps_Snap",
       "target_path":"packages/apps/Snap"
+   },
+   {
+      "repository":"android_hardware_qcom_audio",
+      "target_path":"hardware/qcom-caf/msm8996/audio",
+      "remote":"lineage",
+      "branch":"lineage-18.1-caf-msm8996"
    }
 ]
