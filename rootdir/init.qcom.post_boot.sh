@@ -254,6 +254,9 @@ echo 1 > /sys/module/msm_thermal/core_control/enabled
 # Enable dynamic clock gating
 echo 1 > /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating
 
+# Set rps mask
+echo 2 > /sys/class/net/rmnet0/queues/rx-0/rps_cpus
+
 # Enable timer migration to little cluster
 echo 1 > /proc/sys/kernel/power_aware_timer_migration
 
