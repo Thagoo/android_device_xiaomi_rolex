@@ -5,17 +5,22 @@
     <item name="wifi.on">0.1</item>
     <item name="wifi.active">0.1</item>
     <item name="wifi.scan">0.1</item>
-    <array name="cpu.core_speeds">
+
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+    </array>
+
+    <array name="cpu.core_speeds.cluster0">
         <value>960000</value>
         <value>1094400</value>
         <value>1248000</value>
         <value>1401000</value>
     </array>
-    <array name="cpu.core_active">
-        <value>159</value>
-        <value>207</value>
-        <value>256</value>
-        <value>327</value>
+    <array name="cpu.core_power.cluster0">
+        <value>47.30</value>    <!-- 159mW -->
+        <value>61.58</value>    <!-- 207mW -->
+        <value>76.16</value>    <!-- 256mW -->
+        <value>97.29</value>    <!-- 327mW -->
     </array>
     <item name="cpu.suspend">0.1</item>
     <item name="cpu.active">1.2</item>
