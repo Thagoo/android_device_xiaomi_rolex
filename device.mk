@@ -18,7 +18,7 @@
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-wave
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
@@ -417,15 +417,6 @@ PRODUCT_COPY_FILES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
-
-# Vanilla 
-ifeq ($(VANILLA_BUILD),true)
-PRODUCT_PACKAGES += \
-    Calender \
-    DeskClock \
-    ExactCalcualtor \
-    messaging
-endif
 
 # Vibrator
 PRODUCT_PACKAGES += \
