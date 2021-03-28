@@ -19,5 +19,26 @@
       "target_path":"hardware/qcom-caf/msm8996/audio",
       "remote":"lineage",
       "branch":"lineage-18.1-caf-msm8996"
+   },
+   {
+      "repository":"packages_services_Telephony",
+      "target_path":"packages/services/Telephony",
+      "branch":"r-aosp"
+   },
+   {
+      "repository":"packages_services_Telecomm",
+      "target_path":"packages/services/Telecomm",
+      "branch":"r-aosp"
+   },
+   {
+      "repository":"frameworks_opt_telephony",
+      "target_path":"frameworks/opt/telephony",
+      "branch":"r-aosp"
+   },
+   {
+      "repository":"packages_providers_TelephonyProvider",
+      "target_path":"packages/providers/TelephonyProvider",
+      "branch":"r-aosp"
    }
 ]
+
