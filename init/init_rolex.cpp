@@ -99,10 +99,7 @@ static void set_ramconfig() {
         property_override("dalvik.vm.heapminfree", "2m");
         property_override("dalvik.vm.heapmaxfree", "8m");
 	// Reduce memory footprint
-	property_set("ro.config.avoid_gfx_accel", "true");
-
-	// Consider 2gb varient as low_ram device
-	property_set("ro.config.low_ram", "true");
+	property_override("ro.config.avoid_gfx_accel", "true");
     }
 }
 
