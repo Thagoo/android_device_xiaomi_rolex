@@ -424,7 +424,8 @@ PRODUCT_PACKAGES += \
     Calender \
     DeskClock \
     ExactCalcualtor \
-    messaging
+    messaging \
+    DefaultDialerOverlay
 endif
 
 # Vibrator
