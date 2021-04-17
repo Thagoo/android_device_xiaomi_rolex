@@ -419,7 +419,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
 # Vanilla 
-ifeq ($(VANILLA_BUILD),true)
+ifneq ($(BUILD_WITH_GAPPS),true)
 PRODUCT_PACKAGES += \
     Calender \
     DeskClock \
