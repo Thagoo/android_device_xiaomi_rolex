@@ -7,3 +7,4 @@ allow qti_init_shell configfs:file { write create };
 # Postboot
 allow qti_init_shell sysfs:file { write setattr };
 
+set_prop(qti_init_shell, adsprpc_prop)
